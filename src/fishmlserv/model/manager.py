@@ -1,5 +1,5 @@
 import os
-#import pickle
+import pickle
 def get_model_path():
     path = os.path.dirname(os.path.abspath(__file__))
     model_path = path + "/model.pkl"

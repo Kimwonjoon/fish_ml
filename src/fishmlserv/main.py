@@ -15,7 +15,7 @@ def read_item(item_id: int, q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
 
 @app.get("/fish")
-def fish(length: float = 50, weight: float = 50):
+def fish(length: float, weight: float):
     """
     물고기의 종류 판별기
 
