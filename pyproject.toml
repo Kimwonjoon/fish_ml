@@ -1,6 +1,6 @@
 [project]
 name = "fishmlserv"
-version = "0.6.0"
+version = "0.7.5"
 description = "ML KNN - using sklearn"
 authors = [
     {name = "Kimwonjoon", email = "kimpass189@gmail.com"},
@@ -20,6 +20,9 @@ license = {text = "MIT"}
 
 [tool.pdm]
 distribution = true
+
+[tool.setuptools]
+include-package-data = true
 
 [tool.pdm.dev-dependencies]
 note = [
