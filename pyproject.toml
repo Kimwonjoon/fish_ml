@@ -23,6 +23,9 @@ distribution = true
 packages = [
     { include = "fishmlserv" },
 ]
+include = [
+    "src/fishmlserv/model/model.pkl"
+]
 
 [tool.pdm.dev-dependencies]
 note = [
