@@ -28,13 +28,12 @@ def fish(length: float, weight: float):
     """
     # 모델을 가져와보아요
     model_path = get_model_path()
-    #print(model_path)
-    with open(model_path, 'rb') as f:
-        fish_model = pickle.load(f)
-    fish_class = fish_model.predict([[length, weight]])
-    #fish_class = "몰라"
-    if fish_class == 0:
-        fish_name = "도미"
-    else:
-        fish_name = "빙어"
-    return {"prediction" : fish_name, "lenght" : length, "weight" : weight}
+#    with open(model_path, 'rb') as f:
+#        fish_model = pickle.load(f)
+#    fish_class = fish_model.predict([[length, weight]])
+    fish_name = "몰라"
+#    if fish_class == 0:
+#        fish_name = "도미"
+#    else:
+#        fish_name = "빙어"
+    return {"prediction" : fish_name, "lenght" : length, "weight" : weight, "path" : model_path}
