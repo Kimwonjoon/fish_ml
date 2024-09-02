@@ -6,7 +6,7 @@ WORKDIR /code
 
 #COPY . /code/
 COPY src/fishmlserv/main.py /code/
-COPY model.pkl /code/
+#COPY model.pkl /code/
 #COPY requirements.txt /code/
 
 #RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt

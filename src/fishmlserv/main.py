@@ -27,12 +27,13 @@ def fish(length: float, weight: float):
         dict: 물고기 종류를 담은 딕셔너리  
     """
     model_path = get_model_path
-    with open(model_path, 'rb') as f:
-        fish_model = pickle.load(f)
+#    with open(model_path, 'rb') as f:
+#        fish_model = pickle.load(f)
+    fish_model = get_model_path
     fish_class = fish_model.predict([[length, weight]])
     #fish_class = "몰라"
     if fish_class == 0:
-        fish_class = "도미"
+        fish_name = "도미"
     else:
-        fish_class = "빙어"
-    return {"prediction" : fish_class, "lenght" : length, "weight" : weight}
+        fish_name = "빙어"
+    return {"prediction" : fish_name, "lenght" : length, "weight" : weight}
