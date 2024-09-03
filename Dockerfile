@@ -8,6 +8,7 @@ WORKDIR /code
 #COPY . /code/
 #COPY requirements.txt /code/
 COPY /src/fishmlserv/main.py /code/
+COPY /src/fishmlserv/knn_pred.py /code/
 
 #RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 # pip install 을 내 깃허브 주소로!!

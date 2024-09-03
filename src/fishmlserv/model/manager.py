@@ -6,6 +6,5 @@ def get_model_path():
     model_path = path + "/" + "model.pkl"
 #    with open(model_path, 'rb') as f:
 #        fish_model = pickle.load(f)
-    print(model_path)
     return model_path
 #print(get_model_path())
