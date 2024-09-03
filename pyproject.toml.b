@@ -6,8 +6,14 @@ authors = [
     {name = "Kimwonjoon", email = "kimpass189@gmail.com"},
 ]
 dependencies = [
+    "fastapi>=0.112.2",
+    "uvicorn[standard]>=0.30.6",
+    "matplotlib>=3.9.2",
+    "scikit-learn>=1.5.1",
+    "pandas>=2.2.2",
+    "pyarrow>=17.0.0",
 ]
-requires-python = ">=3.8"
+requires-python = ">=3.11"
 readme = "README.md"
 license = {text = "MIT"}
 
