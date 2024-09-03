@@ -15,5 +15,6 @@ COPY /src/fishmlserv/knn_pred.py /code/
 # pip install 을 내 깃허브 주소로!!
 RUN pip install --no-cache-dir --upgrade git+https://github.com/Kimwonjoon/fish_ml.git@0.8/Dhub
 RUN chmod +x /code/get-model-path.py
+RUN ln -s /code/get-model-path.py /usr/local/bin/get-model-path
 
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
