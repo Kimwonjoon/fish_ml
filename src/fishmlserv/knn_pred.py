@@ -2,12 +2,12 @@ from sklearn.neighbors import KNeighborsClassifier
 from fishmlserv.model.manager import get_model_path
 import pickle
 import fire
-def knn_model(l, w):
+def knn_model(l:float, w:float):
     model_path = get_model_path()
     with open(model_path, 'rb') as f:
         fish_model = pickle.load(f)
 
-    prediction = fish_model.predict([[length, weight]])
+    prediction = fish_model.predict([[l, w]])
     if prediction == 0:
         fish_name = "Bream"
     else:
