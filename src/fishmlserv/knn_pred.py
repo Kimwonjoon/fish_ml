@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from sklearn.neighbors import KNeighborsClassifier
 from fishmlserv.model.manager import get_model_path
 import pickle
