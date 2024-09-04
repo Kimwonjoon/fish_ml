@@ -15,6 +15,10 @@ def read_item(item_id: int, q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
 
 @app.get("/fish")
+# 모델을 가져와보아요
+model_path = get_model_path()
+with open(model_path, 'rb') as f:
+    fish_model = pickle.load(f)
 def fish(length: float, weight: float):
     """
     물고기의 종류 판별기
@@ -27,9 +31,9 @@ def fish(length: float, weight: float):
         dict: 물고기 종류를 담은 딕셔너리  
     """
     # 모델을 가져와보아요
-    model_path = get_model_path()
-    with open(model_path, 'rb') as f:
-        fish_model = pickle.load(f)
+#    model_path = get_model_path()
+#    with open(model_path, 'rb') as f:
+#        fish_model = pickle.load(f)
     fish_class = fish_model.predict([[length, weight]])
 #    fish_name = "몰라"
     if fish_class == 0:
