@@ -18,7 +18,7 @@ COPY /src/fishmlserv/knn_pred.py /code/
 RUN pip install --no-cache-dir --upgrade git+https://github.com/Kimwonjoon/fish_ml.git@1.0.0/k
 RUN chmod +x /code/get-model-path.py
 RUN chmod +x /code/knn_pred.py
-RUN ln -s /code/get-model-path.py /usr/local/bin/get-model-path
-RUN ln -s /code/knn_pred.py /usr/local/bin/knn_pred
+#RUN ln -s /code/get-model-path.py /usr/local/bin/get-model-path
+#RUN ln -s /code/knn_pred.py /usr/local/bin/knn_pred
 
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
