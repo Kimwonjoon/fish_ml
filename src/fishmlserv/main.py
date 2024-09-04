@@ -4,7 +4,10 @@ from fishmlserv.model.manager import get_model_path
 import pickle
 
 app = FastAPI()
-
+# 모델을 가져와보아요
+model_path = get_model_path()
+with open(model_path, 'rb') as f:
+    fish_model = pickle.load(f)
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
@@ -15,10 +18,6 @@ def read_item(item_id: int, q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
 
 @app.get("/fish")
-# 모델을 가져와보아요
-model_path = get_model_path()
-with open(model_path, 'rb') as f:
-    fish_model = pickle.load(f)
 def fish(length: float, weight: float):
     """
     물고기의 종류 판별기
